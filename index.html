@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aMathz</title>
+    <link rel="stylesheet" href="./css/game.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="container__nivel">
+            <h1 class="container__nivel__texto">Nivel 1</h1>
+        </div>
+        <div class="container__pergunta">
+            <label class="primeiroNumero">?</label>
+            <label>+</label>
+            <label class="segundoNumero">?</label>
+        </div>
+        <div class="container__resposta">
+            <label id="opt1" class="resposta">?</label>
+            <label id="opt2" class="resposta">?</label>
+            <label id="opt3" class="resposta">?</label>
+        </div>
+        <div class="container__timer">
+            <div class="countdown" id="countdown"></div>
+            <a href="#" class="container__timer__botao" id="container__timer__botao">Iniciar</a>
+        </div>
+    </section>
+    <script src="./js/game.js"></script>
+    <script src="./js/timer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --cor-clara: #EDF1D6;
+  --cor-escura: #40513B;
+  --cor-destaque: #609966;  
+
+  --fonte-principal: 'Krona One', sans-serif;  
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {                
+  background-color: var(--cor-escura);        
+  color: var(--cor-clara);  
+  font-family: var(--fonte-principal);
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10% 40% 40% 10%;
+}
+
+.resultado {
+  grid-template-rows: 40% 40% 20%;
+}
+
+.container__nivel {        
+  background-color: var(--cor-clara);
+  display: flex;   
+  justify-content: center;   
+  align-items: center;  
+}
+
+.container__nivel__texto {       
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid var(--cor-destaque);
+  color: var(--cor-destaque);
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1%;
+}
+
+.container__pergunta {       
+  color: var(--cor-clara);
+  font-size: 4rem;
+
+  display: flex;  
+  align-items: center;
+  justify-content: center;  
+  padding: 0% 2% 0% 2%;
+}
+
+.container__resposta {    
+  color: var(--cor-clara);
+  font-size: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;  
+  padding: 0% 4% 0% 4%;
+  text-align: center;
+}
+
+.container__timer {    
+  display: flex;   
+  align-items: center;
+  justify-content: center;  
+
+  background-color: var(--cor-clara);
+}
+
+.container__timer__botao{
+  background-color: transparent;
+  border: 2px solid var(--cor-destaque);
+  border-radius: 5px;
+  color: var(--cor-destaque);
+  text-decoration: none;
+  text-align: center;
+  padding: 2px;
+}
+
+.countdown {
+  color: var(--cor-destaque);
+  font-size: 2rem;
+}
+
+.resposta {
+  cursor: pointer;  
+}
+
+.invisivel {
+  display: none;
+}
+
+.container__resultado {
+  font-size: 2rem;
+
+  display: flex;  
+  align-items: center;
+  justify-content: center;  
+  flex-direction: column;
+  gap: 2vh;
+  padding: 0% 2% 0% 2%;
+  text-align: center;
+}
+
+@media (max-height: 600px) {
+  .container {    
+    grid-template-rows: 40% 40% 20%;
+  }
+
+  .container__nivel {      
+    display:none;
+  }
+  
+}
