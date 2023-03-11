@@ -106,6 +106,19 @@ body {
   text-align: center;
 }
 
+.challenge_text {
+  font-size: 2rem;
+}
+
+.challenge {
+  color: var(--cor-clara);
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-destaque);
+}
+
 @media (max-height: 600px) {
   .container {    
     grid-template-rows: 40% 40% 20%;
