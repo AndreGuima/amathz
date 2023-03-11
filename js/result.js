@@ -39,5 +39,3 @@ if (lbResultado != undefined) {
     }
 
 }
-
-localStorage.clear();
