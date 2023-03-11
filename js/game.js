@@ -8,17 +8,6 @@ var lbOpt3 = document.querySelector("#opt3");
 var lbPrimeiroNumero = document.querySelector(".primeiroNumero");
 var lbSegundoNumero = document.querySelector(".segundoNumero");
 
-function verificaAcerto(chute) {
-    if (chute != resposta) {        
-        window.location.href = "./result.html";
-    } else {
-        acertos++;
-        localStorage.setItem("acertos", acertos);
-    }
-
-    fazPergunta();
-}
-
 function fazPergunta() {
     var numerosPergunta = [Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1];
     resposta = numerosPergunta[0] + numerosPergunta[1];    
