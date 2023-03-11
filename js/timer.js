@@ -1,8 +1,7 @@
 var button = document.querySelector("#container__timer__botao");
 var mostrador = document.querySelector("#countdown");
 
-button.addEventListener('click', function() {
-    fazPergunta();
+button.addEventListener('click', function() {    
 
     lbOpt1.addEventListener("click", function () {
         verificaAcerto(this.textContent);
@@ -17,6 +16,9 @@ button.addEventListener('click', function() {
     });
 
     this.classList.add("invisivel");
+    localStorage.clear();
+    localStorage.setItem("acertos", 0);
+    fazPergunta();
     
     new Timer(1, mostrador, function() { 
         window.location.href = "./result.html";  
@@ -56,4 +58,14 @@ Timer.prototype.count = function(s) {
             self.done.call(self);
         }
     }, 1000);
+}
+
+function verificaAcerto(chute) {
+    if (chute != resposta) {        
+        window.location.href = "./result.html";
+    } else {
+        acertos++;
+        localStorage.setItem("acertos", acertos);
+        fazPergunta();
+    }    
 }
