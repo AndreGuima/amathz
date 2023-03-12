@@ -16,6 +16,7 @@ button.addEventListener('click', function() {
         verificaAcerto(this.textContent);
     });
 
+    localStorage.setItem("acertos", 0);
     this.classList.add("invisivel");
     
     new Timer(1, mostrador, function() { 
@@ -56,4 +57,16 @@ Timer.prototype.count = function(s) {
             self.done.call(self);
         }
     }, 1000);
+}
+
+function verificaAcerto(chute) {
+    if (chute != resposta) {        
+        window.location.href = "./result.html";
+    } else {
+        acertos = localStorage.getItem("acertos");
+        acertos++;
+        localStorage.setItem("acertos", acertos);
+    }
+    
+    fazPergunta();
 }

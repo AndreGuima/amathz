@@ -1,4 +1,4 @@
-localStorage.setItem("proximaPagina", "./nivel3.html");
+localStorage.setItem("proximaPagina", "./nivel4.html");
 if (!localStorage.getItem("acertos") < 40) {
     window.location.href = "./index.html";
 }
