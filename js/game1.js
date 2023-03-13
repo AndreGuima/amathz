@@ -1,3 +1,7 @@
+var proximaPagina = localStorage.getItem("proximaPagina");
+if (localStorage.getItem("proximaPagina") != "./nivel1.html") {
+    window.location.href = "./index.html";
+}
 localStorage.setItem("proximaPagina", "./nivel2.html");
 
 var numeroGerado = 0;

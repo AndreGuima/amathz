@@ -78,7 +78,7 @@ body {
   color: var(--cor-destaque);
   text-decoration: none;
   text-align: center;
-  padding: 2px;
+  padding: 2%;
 }
 
 .countdown {
@@ -106,12 +106,24 @@ body {
   text-align: center;
 }
 
-.challenge_text {
-  font-size: 2rem;
+.easy {
+  color: var(--cor-easy-clara);
+  border: 2px solid var(--cor-easy-clara);
 }
 
-.challenge {
-  color: var(--cor-clara);
+.normal {
+  color: var(--cor-normal-clara);
+  border: 2px solid var(--cor-normal-clara);
+}
+
+.hard {
+  color: var(--cor-hard-clara);
+  border: 2px solid var(--cor-hard-clara);
+}
+
+.expert {
+  color: var(--cor-expert-clara);
+  border: 2px solid var(--cor-expert-clara);
 }
 
 a {

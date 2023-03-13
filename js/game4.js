@@ -1,9 +1,8 @@
 var proximaPagina = localStorage.getItem("proximaPagina");
-if (localStorage.getItem("proximaPagina") != "./nivel2.html") {
+if (localStorage.getItem("proximaPagina") != "./nivel4.html") {
     window.location.href = "./index.html";
 }
-localStorage.setItem("proximaPagina", "./nivel3.html");
-
+localStorage.setItem("proximaPagina", "./index.html");
 
 var numeroGerado = 0;
 var resposta = 0;
@@ -22,7 +21,8 @@ function fazPergunta() {
 
     for (i = 0; i < 2; i++) {
 
-        while (numerosPergunta.length < 2) {            
+        while (numerosPergunta.length < 2) {
+            console.log("While com o numero gerado: " + numeroGerado);
             if (numerosPergunta.length == 1) {
                 if (numeroGerado <= numerosPergunta[0]) {
                     numerosPergunta[i] = numeroGerado;
@@ -39,7 +39,7 @@ function fazPergunta() {
 
     lbPrimeiroNumero.textContent = numerosPergunta[0];
     lbSegundoNumero.textContent = numerosPergunta[1];
-    resposta = numerosPergunta[0] - numerosPergunta[1];
+    resposta = numerosPergunta[0] / numerosPergunta[1];
 
     monstaOpcoesRespostaSubtracao();
 }

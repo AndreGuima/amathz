@@ -1,11 +1,12 @@
-localStorage.setItem("proximaPagina", "./nivel4.html");
-if (!localStorage.getItem("acertos") < 40) {
+var proximaPagina = localStorage.getItem("proximaPagina");
+if (localStorage.getItem("proximaPagina") != "./nivel3.html") {
     window.location.href = "./index.html";
 }
+localStorage.setItem("proximaPagina", "./nivel4.html");
 
 var numeroGerado = 0;
 var resposta = 0;
-
+var maiorNumero = 0;
 
 var lbOpt1 = document.querySelector("#opt1");
 var lbOpt2 = document.querySelector("#opt2");
@@ -16,55 +17,46 @@ var numerosPergunta = [];
 
 function fazPergunta() {
     numerosPergunta = [];
-    retornaNumero1a20();
+    retornaNumero1a10();
 
-    for (i = 0; i < 2; i++) {
-
-        while (numerosPergunta.length < 2) {
-            console.log("While com o numero gerado: " + numeroGerado);
-            if (numerosPergunta.length == 1) {
-                if (numeroGerado <= numerosPergunta[0]) {
-                    numerosPergunta[i] = numeroGerado;
-                    break;
-                }
-            } else if (numeroGerado > 3) {
-                numerosPergunta[i] = numeroGerado;
-                retornaNumero1a20();
-                break;
-            }
-            retornaNumero1a20();
-        }
-    }
-
-    if (numerosPergunta.length < 2) {
-        alert("ERRO!");
+    for (i = 0; i < 2; i++) {        
+        numerosPergunta[i] = numeroGerado;
+        retornaNumero1a10();
     }
 
     lbPrimeiroNumero.textContent = numerosPergunta[0];
     lbSegundoNumero.textContent = numerosPergunta[1];
-    resposta = numerosPergunta[0] - numerosPergunta[1];
+    resposta = numerosPergunta[0] * numerosPergunta[1];
 
-    monstaOpcoesRespostaSubtracao();
+    maiorNumero = Math.max(numerosPergunta[0], numerosPergunta[1]);
+    mostraOpcoesRespostaMultiplicacao();
 }
 
-function retornaNumero1a20() {
-    numeroGerado = Math.floor(Math.random() * 20) + 1;
+function retornaNumero1a10() {
+    numeroGerado = Math.floor(Math.random() * 10) + 1;
 }
 
-function monstaOpcoesRespostaSubtracao() {
+function retornaOpcaoDeRespostaMultiplicacao() {
+    numeroGerado = numerosPergunta[0] * (Math.floor(Math.random() * 10) + 1);
+}
 
-    var numerosResposta = [];
-    var maiorNumero = Math.max(numerosPergunta[0], numerosPergunta[1]);
-    retornaNumero1a20();
+function mostraOpcoesRespostaMultiplicacao() {
 
-    for (i = 0; i < 2; i++) {
-        while (numerosResposta.length < 2) {
-            if ((resposta != numeroGerado) && (numeroGerado < maiorNumero) && (!numerosResposta.includes(numeroGerado))) {
+    var numerosResposta = [];    
+    retornaOpcaoDeRespostaMultiplicacao();
+
+    for (i = 0; i < 2; i++) {        
+        while (numerosResposta.length < 2) {      
+            console.log("Entrou no while com o numero: " + numeroGerado);
+            
+            if ((numeroGerado != resposta) && (numeroGerado > maiorNumero) && (!numerosResposta.includes(numeroGerado))) {
+                console.log("Adicionou a opção de resposta com o numero: " + numeroGerado);
                 numerosResposta[i] = numeroGerado;
-                retornaNumero1a20();
+                retornaOpcaoDeRespostaMultiplicacao();
                 break;
             } else {
-                retornaNumero1a20();
+                console.log("Ignorou a opção de resposta do numero: " + numeroGerado);
+                retornaOpcaoDeRespostaMultiplicacao();
             }
         }
     }
