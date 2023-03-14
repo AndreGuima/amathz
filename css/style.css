@@ -9,16 +9,15 @@ body {
   font-family: var(--fonte-principal);
   min-height: 100vh;
   display: flex;  
+  flex-direction: column;      
   justify-content: space-between;
+  width: 100%;  
 }
 
 .container {  
   display: flex;     
   flex-direction: column;  
-  
-  margin: 0 auto;
-  max-width: 80ch;
-  width: 100%;
+  gap:2vh;    
 }
 
 .container__nivel {          
@@ -59,6 +58,7 @@ body {
   color: var(--cor-clara);
   font-size: 3.5rem;  
   margin: 6% 4% 0% 4%;
+  gap: 2vh;
 }
 
 .operador{
@@ -73,25 +73,6 @@ body {
   align-items: center;
   justify-content: space-around;  
   margin: 6% 4% 0% 4%;
-}
-
-.container__timer {    
-  display: flex;   
-  align-items: center;
-  justify-content: center;  
-  margin-top: auto;
-  background-color: var(--cor-clara);
-}
-
-.container__timer__botao{
-  background-color: transparent;
-  border: 2px solid var(--cor-destaque);
-  border-radius: 5px;
-  color: var(--cor-destaque);
-  text-decoration: none;
-  text-align: center;
-  padding: 1%;
-  margin:2%;
 }
 
 .countdown {
@@ -116,6 +97,31 @@ body {
   flex-direction: column;
   gap: 2vh;
   padding: 0% 2% 0% 2%;
+  text-align: center;
+}
+
+footer {    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor-clara);
+}
+
+.container__footer {
+  display: flex;
+  margin: 2% 2%;
+}
+
+.container__timer {    
+  display: flex;       
+}
+
+.container__timer__botao{
+  background-color: transparent;
+  border: 2px solid var(--cor-destaque);
+  border-radius: 5px;
+  color: var(--cor-destaque);
+  text-decoration: none;
   text-align: center;
 }
 
