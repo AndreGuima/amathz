@@ -33,7 +33,7 @@ function fazPergunta() {
 }
 
 function retornaNumero1a10() {
-    numeroGerado = Math.floor(Math.random() * 10) + 1;
+    numeroGerado = Math.floor(Math.random() * 9) + 1;
 }
 
 function retornaOpcaoDeRespostaMultiplicacao() {

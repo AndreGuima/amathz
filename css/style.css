@@ -106,6 +106,13 @@ body {
   text-align: center;
 }
 
+.resultado {
+  margin: 2% 2%;
+  gap: 6vh;
+  font-size: 2rem;
+  padding-top: 2%;
+}
+
 footer {    
   display: flex;
   flex-direction: column;
@@ -158,6 +165,7 @@ footer {
 a {
   text-decoration: none;
   color: var(--cor-destaque);
+  font-size: 2rem;
 }
 
 @media (max-height: 580px) {  
