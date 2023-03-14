@@ -3,23 +3,20 @@ var btNormal = document.querySelector(".normal");
 var btHard = document.querySelector(".hard");
 var btExpert = document.querySelector(".expert");
 
+localStorage.setItem("proximaPagina", "./nivel1.html");
 
 btEasy.addEventListener('click', function() {
-    localStorage.setItem("nivel", "easy");     
-    localStorage.setItem("proximaPagina", "./nivel1.html");
+    localStorage.setItem("nivel", "easy");         
 });
 
 btNormal.addEventListener('click', function() {
-    localStorage.setItem("nivel", "normal");            
-    localStorage.setItem("proximaPagina", "./nivel1.html");
+    localStorage.setItem("nivel", "normal");                
 });
 
 btHard.addEventListener('click', function() {
-    localStorage.setItem("nivel", "hard");            
-    localStorage.setItem("proximaPagina", "./nivel1.html");
+    localStorage.setItem("nivel", "hard");                
 });
 
 btExpert.addEventListener('click', function() {
-    localStorage.setItem("nivel", "expert");            
-    localStorage.setItem("proximaPagina", "./nivel1.html");
+    localStorage.setItem("nivel", "expert");                
 });
