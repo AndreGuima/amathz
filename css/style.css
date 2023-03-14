@@ -7,29 +7,25 @@ body {
   background-color: var(--cor-escura);        
   color: var(--cor-clara);  
   font-family: var(--fonte-principal);
+  min-height: 100vh;
+  display: flex;  
+  justify-content: space-between;
 }
 
-.container {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 10% 40% 40% 10%;
+.container {  
+  display: flex;     
+  flex-direction: column;  
+  
+  margin: 0 auto;
+  max-width: 80ch;
+  width: 100%;
 }
 
-.container__index{
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 10% 80% 10%;
-}
-
-.resultado {
-  grid-template-rows: 40% 40% 20%;
-}
-
-.container__nivel {        
-  background-color: var(--cor-clara);
+.container__nivel {          
   display: flex;   
   justify-content: center;   
   align-items: center;  
+  background-color: var(--cor-clara);
 }
 
 .container__nivel__texto {       
@@ -42,6 +38,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   padding: 1%;
+  margin:2%;
 }
 
 .container__pergunta {       
@@ -50,18 +47,18 @@ body {
 
   display: flex;  
   align-items: center;
-  justify-content: center;  
-  padding: 0% 2% 0% 2%;
+  justify-content: center;    
+  margin: 4%;
 }
 
 .container__pergunta__index {
-  flex-direction: column;
-  color: var(--cor-clara);
-  font-size: 4rem;
-
   display: flex;  
   align-items: center;
-  justify-content: space-evenly;    
+  justify-content: space-evenly;      
+  flex-direction: column;
+  color: var(--cor-clara);
+  font-size: 3.5rem;  
+  margin: 6% 4% 0% 4%;
 }
 
 .operador{
@@ -70,20 +67,19 @@ body {
 
 .container__resposta {    
   color: var(--cor-clara);
-  font-size: 4rem;
+  font-size: 3.5rem;
 
   display: flex;
   align-items: center;
   justify-content: space-around;  
-  padding: 0% 4% 0% 4%;
-  text-align: center;
+  margin: 6% 4% 0% 4%;
 }
 
 .container__timer {    
   display: flex;   
   align-items: center;
   justify-content: center;  
-
+  margin-top: auto;
   background-color: var(--cor-clara);
 }
 
@@ -95,6 +91,7 @@ body {
   text-decoration: none;
   text-align: center;
   padding: 1%;
+  margin:2%;
 }
 
 .countdown {
@@ -147,17 +144,15 @@ a {
   color: var(--cor-destaque);
 }
 
-@media (max-height: 600px) {
-  .container {    
-    grid-template-rows: 40% 40% 20%;
-  }
-  
-  .container__index {    
-    grid-template-rows: 80% 20%;
-  }
+@media (max-height: 580px) {  
 
   .container__pergunta__index {    
-    font-size: 2rem;  
+    margin: 0%;
+    font-size: 2rem;      
+  }
+
+  .container__timer__botao{        
+    margin:1%;
   }
 
   .container__nivel {      
