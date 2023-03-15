@@ -17,50 +17,59 @@ var numerosPergunta = [];
 
 function fazPergunta() {
     numerosPergunta = [];
-    retornaNumero1a40();
+    retornaNumero2a40();
 
-    for (i = 0; i < 2; i++) {
-
+    for (i = 0; i < 2; i++) {        
         while (numerosPergunta.length < 2) {
             if (numerosPergunta.length == 1) {
-                if ((numeroGerado <= numerosPergunta[0]) && (Number.isInteger(numerosPergunta[0] / numeroGerado))) {
+                if ((numeroGerado < numerosPergunta[0]) && (Number.isInteger(numerosPergunta[0] / numeroGerado))) {
                     numerosPergunta[i] = numeroGerado;
                     break;
                 }
             } else if (numeroGerado >= 4) {
-                numerosPergunta[i] = numeroGerado;
-                retornaNumero1a40();
-                break;
+                var divisores = 0;
+                for (var count = 1; count <= numeroGerado; count++) {
+                    if (numeroGerado % count == 0) {
+                        divisores++;
+                    }
+                }
+                if (divisores == 2) {                    
+                    retornaNumero2a40();                    
+                } else {
+                    numerosPergunta[i] = numeroGerado;
+                    retornaNumero2a40();
+                    break;
+                }
             }
-            retornaNumero1a40();
+            retornaNumero2a40();
         }
     }
 
     lbPrimeiroNumero.textContent = numerosPergunta[0];
     lbSegundoNumero.textContent = numerosPergunta[1];
     resposta = numerosPergunta[0] / numerosPergunta[1];
-
+    
     montaOpcoesRespostaDivisao();
 }
 
-function retornaNumero1a40() {
-    numeroGerado = Math.floor(Math.random() * 40) + 1;
+function retornaNumero2a40() {
+    numeroGerado = Math.floor(Math.random() * 40) + 2;
 }
 
 function montaOpcoesRespostaDivisao() {
 
     var numerosResposta = [];
     var maiorNumero = Math.max(numerosPergunta[0], numerosPergunta[1]);
-    retornaNumero1a40();
+    retornaNumero2a40();
 
     for (i = 0; i < 2; i++) {
         while (numerosResposta.length < 2) {
             if ((resposta != numeroGerado) && (numeroGerado <= maiorNumero) && (!numerosResposta.includes(numeroGerado))) {
                 numerosResposta[i] = numeroGerado;
-                retornaNumero1a40();
+                retornaNumero2a40();
                 break;
-            } else {
-                retornaNumero1a40();
+            } else {                
+                retornaNumero2a40();
             }
         }
     }
@@ -72,4 +81,19 @@ function montaOpcoesRespostaDivisao() {
     lbOpt1.textContent = numerosResposta[0];
     lbOpt2.textContent = numerosResposta[1];
     lbOpt3.textContent = numerosResposta[2];
+}
+
+function primo() {
+    var numero = parseInt(document.getElementById('num').value);
+    var resposta = document.getElementById('resposta');
+    var divisores = 0;
+
+    for (var count = 1; count <= numero; count++)
+        if (numero % count == 0)
+            divisores++;
+
+    if (divisores == 2)
+        resposta.innerHTML = 'É primo';
+    else
+        resposta.innerHTML = 'Não é primo';
 }
