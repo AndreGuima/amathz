@@ -46,16 +46,12 @@ function mostraOpcoesRespostaMultiplicacao() {
     retornaOpcaoDeRespostaMultiplicacao();
 
     for (i = 0; i < 2; i++) {        
-        while (numerosResposta.length < 2) {      
-            console.log("Entrou no while com o numero: " + numeroGerado);
-            
-            if ((numeroGerado != resposta) && (numeroGerado > maiorNumero) && (!numerosResposta.includes(numeroGerado))) {
-                console.log("Adicionou a opção de resposta com o numero: " + numeroGerado);
+        while (numerosResposta.length < 2) {                              
+            if ((numeroGerado != resposta) && (numeroGerado > maiorNumero) && (!numerosResposta.includes(numeroGerado))) {                
                 numerosResposta[i] = numeroGerado;
                 retornaOpcaoDeRespostaMultiplicacao();
                 break;
-            } else {
-                console.log("Ignorou a opção de resposta do numero: " + numeroGerado);
+            } else {                
                 retornaOpcaoDeRespostaMultiplicacao();
             }
         }
