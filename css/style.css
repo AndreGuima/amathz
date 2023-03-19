@@ -78,7 +78,7 @@ header {
 .container__resposta {
   display: flex;
   align-items: center;
-  justify-content: space-around;  
+  justify-content: space-evenly;  
   position: fixed;
   top: 190px;
   right: 0;
@@ -241,9 +241,13 @@ a {
 
 }
 
-@media (max-height: 500px) {
+@media (max-height: 420px) {
   footer {
     display: none;
+  }
+
+  .resposta{
+    margin-top: 5vh;
   }
 
 }
