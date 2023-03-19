@@ -32,6 +32,7 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 2vh;
   position: fixed;
   top: 80px;
   right: 0;
