@@ -7,12 +7,6 @@ localStorage.setItem("proximaPagina", "./nivel2.html");
 var numeroGerado = 0;
 var resposta = 0;
 
-var lbOpt1 = document.querySelector("#opt1");
-var lbOpt2 = document.querySelector("#opt2");
-var lbOpt3 = document.querySelector("#opt3");
-var lbPrimeiroNumero = document.querySelector(".primeiroNumero");
-var lbSegundoNumero = document.querySelector(".segundoNumero");
-
 function fazPergunta() {
     var numerosPergunta = [Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1];
     resposta = numerosPergunta[0] + numerosPergunta[1];    

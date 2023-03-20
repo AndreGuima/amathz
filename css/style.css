@@ -160,27 +160,27 @@ footer {
 }
 
 .easy {
-  color: var(--cor-easy-clara);
-  border: 2px solid var(--cor-easy-clara);  
+  color: var(--cor-clara);
+  border: 2px solid var(--cor-clara);  
   padding: 2px;
   margin-top: 5vh;
 }
 
 .normal {
-  color: var(--cor-normal-clara);
-  border: 2px solid var(--cor-normal-clara);
+  color: var(--cor-clara);
+  border: 2px solid var(--cor-clara);
   padding: 2px;
 }
 
 .hard {
-  color: var(--cor-hard-clara);
-  border: 2px solid var(--cor-hard-clara);
+  color: var(--cor-clara);
+  border: 2px solid var(--cor-clara);
   padding: 2px;
 }
 
 .expert {
-  color: var(--cor-expert-clara);
-  border: 2px solid var(--cor-expert-clara);
+  color: var(--cor-clara);
+  border: 2px solid var(--cor-clara);
   padding: 2px;
 }
 
