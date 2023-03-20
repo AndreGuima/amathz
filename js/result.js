@@ -8,6 +8,8 @@ if (nivel === "practice") {
     btVoltar.href = proximaPagina;
 }
 var proximaPagina = localStorage.getItem("proximaPagina");
+btVoltar.href = proximaPagina;
+
 var lbResultado = document.querySelector(".lbResultado");
 
 if (lbResultado != undefined) {
@@ -32,8 +34,7 @@ if (lbResultado != undefined) {
         if (nivel == "easy") {
             lbResultado.textContent = "Você fez " + acertos + " pontos, TOP!!!";
             lbClassificacao.textContent = "Boa!";
-            lbMensagemResultado.textContent = "Parabéns! Pode avançar para o próximo nivel.";            
-            btVoltar.href = proximaPagina;
+            lbMensagemResultado.textContent = "Parabéns! Pode avançar para o próximo nivel.";                        
         } else {
             lbResultado.textContent = "Você fez " + acertos + " pontos apenas!";
             lbClassificacao.textContent = "Novato!";
@@ -43,8 +44,7 @@ if (lbResultado != undefined) {
         if (nivel == "easy" || nivel == "normal") {
             lbResultado.textContent = "Você fez " + acertos + " pontos, TOP!!!";
             lbClassificacao.textContent = "Você é demais!";
-            lbMensagemResultado.textContent = "Parabéns! Pode avançar para o próximo nivel.";            
-            btVoltar.href = proximaPagina;
+            lbMensagemResultado.textContent = "Parabéns! Pode avançar para o próximo nivel.";                        
         } else {
             lbResultado.textContent = "Você fez " + acertos + " pontos.";
             lbClassificacao.textContent = "Ok, bacana.";
@@ -54,8 +54,7 @@ if (lbResultado != undefined) {
         if (nivel == "easy" || nivel == "normal" || nivel == "hard") {
             lbResultado.textContent = "Você fez " + acertos + " pontos, TOP!!!";
             lbClassificacao.textContent = "Gênial! Você é demais!";
-            lbMensagemResultado.textContent = "Parabéns! Pode avançar para o próximo nivel.";            
-            btVoltar.href = proximaPagina;
+            lbMensagemResultado.textContent = "Parabéns! Pode avançar para o próximo nivel.";                        
         } else {
             lbResultado.textContent = "Você fez " + acertos + " pontos, muito bom!";
             lbClassificacao.textContent = "Boa! essa foi por pouco ein.";
@@ -64,15 +63,10 @@ if (lbResultado != undefined) {
     } else if (acertos <= 45) {
         lbResultado.textContent = "Você fez " + acertos + " pontos, TOP!!!";
         lbClassificacao.textContent = "Gênial! Você é demais!";
-        lbMensagemResultado.textContent = "Parabéns! Pode avançar para o próximo nivel.";        
-        btVoltar.href = proximaPagina;
+        lbMensagemResultado.textContent = "Parabéns! Pode avançar para o próximo nivel.";
     } else if (acertos > 45) {
         lbResultado.textContent = "Você fez " + acertos + " pontos, Como assim?!";
         lbClassificacao.textContent = "Você não existe!";
-        lbMensagemResultado.textContent = "Ou você burlou o sistema ou você é o novo Albert Einstein.";        
-        btVoltar.href = proximaPagina;
+        lbMensagemResultado.textContent = "Ou você burlou o sistema ou você é o novo Albert Einstein.";
     }
-
-
-
 }
