@@ -31,7 +31,7 @@ if (lbResultado != undefined) {
         lbClassificacao.textContent = "Estamos aquecendo ainda.";
         lbMensagemResultado.textContent = "Você precisa se concentrar mais.";
     } else if (acertos <= 30) {
-        if (nivel == "easy") {
+        if (nivel === "easy" || nivel === "practice") {
             lbResultado.textContent = "Você fez " + acertos + " pontos, TOP!!!";
             lbClassificacao.textContent = "Boa!";
             lbMensagemResultado.textContent = "Parabéns! Pode avançar para o próximo nivel.";                        
@@ -41,7 +41,7 @@ if (lbResultado != undefined) {
             lbMensagemResultado.textContent = "Precisa treinar mais para avançar para o próximo nivel.";
         }        
     } else if (acertos <= 35) {
-        if (nivel == "easy" || nivel == "normal") {
+        if (nivel === "easy" || nivel === "normal" || nivel === "practice") {
             lbResultado.textContent = "Você fez " + acertos + " pontos, TOP!!!";
             lbClassificacao.textContent = "Você é demais!";
             lbMensagemResultado.textContent = "Parabéns! Pode avançar para o próximo nivel.";                        
@@ -51,7 +51,7 @@ if (lbResultado != undefined) {
             lbMensagemResultado.textContent = "Precisa ser mais rápido para avançar para o próximo nivel.";
         }        
     } else if (acertos <= 40) {
-        if (nivel == "easy" || nivel == "normal" || nivel == "hard") {
+        if (nivel === "easy" || nivel === "normal" || nivel === "hard" || nivel === "practice") {
             lbResultado.textContent = "Você fez " + acertos + " pontos, TOP!!!";
             lbClassificacao.textContent = "Gênial! Você é demais!";
             lbMensagemResultado.textContent = "Parabéns! Pode avançar para o próximo nivel.";                        
