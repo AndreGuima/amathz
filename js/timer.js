@@ -1,5 +1,6 @@
 var button = document.querySelector("#container__timer__botao");
 var mostrador = document.querySelector("#countdown");
+var points = document.querySelector(".points");
 
 button.addEventListener('click', function() {
     fazPergunta();
@@ -65,6 +66,7 @@ function verificaAcerto(chute) {
     } else {
         acertos = localStorage.getItem("acertos");
         acertos++;
+        points.textContent = "Points: " + acertos;
         localStorage.setItem("acertos", acertos);
     }
     
